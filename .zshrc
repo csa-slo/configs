@@ -2,18 +2,6 @@
 # csx's .zshrc #
 ################
 
-#zsh-newuser-install
-HISTFILE="$XDG_STATE_HOME/zsh/history"
-HISTSIZE=1000
-SAVEHIST=1000
-zstyle :compinstall filename '/home/csx/.zshrc'
-autoload -Uz compinit
-#compinit
-compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
-
-#bindings
-bindkey ";3D" backward-word
-bindkey ";3C" forward-word
 
 #aliases
 alias sudo='sudo '
@@ -21,9 +9,21 @@ alias sudo='sudo '
 alias sus='systemctl suspend'
 alias off='systemctl poweroff'
 
-alias plasma="$HOME/.plasma.sh"
-alias gnome="$HOME/.gnome.sh"
 alias i3="startx"
+alias plasma="$HOME/local/scripts/plasma.sh"
+alias gnome="$HOME/local/scripts/gnome.sh"
+
+#bindings
+bindkey ";3D" backward-word
+bindkey ";3C" forward-word
+
+#zsh-newuser-install
+HISTFILE="$HOME/.histfile"
+HISTSIZE=1000
+SAVEHIST=1000
+zstyle :compinstall filename '/home/csx/.zshrc'
+autoload -Uz compinit
+compinit
 
 #scripts
 zsh_plugindir="/usr/share/zsh/plugins"
