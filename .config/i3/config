@@ -78,6 +78,8 @@ assign [class="^Pavucontrol$"] 10
 bindsym $mod+Return exec $term
 # start nnn
 bindsym $mod+n exec $term -e nnn
+# Open i3 config file
+bindsym $mod+i exec $term -e nvim ~/.config/i3/config
 
 # Start rofi
 bindsym $mod+space exec ~/.config/i3/scripts/rofi.sh
@@ -86,6 +88,12 @@ bindsym $mod+space exec ~/.config/i3/scripts/rofi.sh
 bindsym $mod+z exec firefox
 # Start thunar
 bindsym $mod+x exec thunar
+
+# Suspend
+bindsym $mod+F11 exec systemctl suspend
+
+# Poweroff
+bindsym $mod+F12 exec systemctl poweroff
 
 
 ###############
@@ -185,7 +193,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+q exec "i3-msg exit"
+bindsym $mod+Shift+Escape exec "i3-msg exit"
 
 # resize mode
 mode "resize" {
