@@ -1,0 +1,256 @@
+[{
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "width": 2560,
+
+    "modules-left": ["wlr/workspaces"],
+    "modules-center": ["hyprland/submap"],
+    "modules-right": ["hyprland/language", "pulseaudio", "network", "tray"],
+
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-bottom": 0,
+    "margin-right": 0,
+    "spacing": 2,
+
+    "name": "csx-bar",
+    "mode": "dock",
+    "modifier-reset": "press",
+    "exclusive": true,
+    "fixed-center": false,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "ipc": false,
+    "id": "csx-bar-id",
+    "include": [],
+
+    "wlr/workspaces": {
+         "format": "{name}: {icon}",
+         "format-icons": {
+             "1": "",
+             "2": "",
+             "8": "",
+             "9": "",
+             "10": "",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         },
+         "sort-by-name": false,
+         "sort-by-coordinates": false,
+         "sort-by-number": true,
+         "all-outputs": true,
+         "active-only": false,
+         "disable-scroll": true,
+         "on-click": "activate",
+     },
+     "hyprland/submap": {
+         "format": "{}",
+         "tooltip": false
+     },
+    "hyprland/window": {
+         "format": "{}",
+         "separate-outputs": true
+     },
+     "hyprland/language": {
+         "format": "{}",
+     },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip": false,
+        "start-activated": false,
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{volume}% {icon}",
+        "format-bluetooth": " {volume}% {icon}",
+        "format-bluetooth-muted": " {volume}% ",
+        "format-muted": "{volume}% ",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "network": {
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠",
+        "tooltip": false
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% ",
+        "tooltip": false
+    },
+    "disk#root": {
+        "format": "/: {percentage_used}% ",
+        "path": "/",
+        "tooltip": false
+    },
+    "disk#home": {
+        "format": "/home: {percentage_used}% ",
+        "path": "/home",
+        "tooltip": false
+    },
+    "disk#boot": {
+        "format": "/boot: {percentage_used}% ",
+        "path": "/boot",
+        "tooltip": false
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""],
+        "tooltip": false
+    },
+    "clock": {
+        "timezone": "America/Los_Angeles",
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip": false
+    },
+    "tray": {
+        "icon-size": 24,
+        "spacing": 6,
+        "tooltip": false
+    }
+}, {
+    "layer": "top",
+    "position": "bottom",
+    "height": 40,
+    "width": 2560,
+
+    "modules-left": ["custom/start", "hyprland/submap"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["cpu", "memory", "disk#root", "disk#home", "disk#boot", "temperature", "clock"],
+
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-bottom": 0,
+    "margin-right": 0,
+    "spacing": 2,
+
+    "name": "csx-bar",
+    "mode": "dock",
+    "modifier-reset": "press",
+    "exclusive": true,
+    "fixed-center": false,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "ipc": false,
+    "id": "csx-bar-id",
+    "include": [],
+
+    "custom/start": {
+         "format": "",
+	 "on-click": "/home/zen/.config/hypr/scripts/applauncher.sh"
+    },
+
+    "wlr/workspaces": {
+         "format": "{name}: {icon}",
+         "format-icons": {
+             "1": "",
+             "2": "",
+             "8": "",
+             "9": "",
+             "10": "",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         },
+         "sort-by-name": false,
+         "sort-by-coordinates": false,
+         "sort-by-number": true,
+         "all-outputs": true,
+         "active-only": false,
+         "disable-scroll": true,
+         "on-click": "activate",
+     },
+     "hyprland/submap": {
+         "format": "{}",
+         "tooltip": false
+     },
+    "hyprland/window": {
+         "format": "{}",
+         "separate-outputs": true
+     },
+     "hyprland/language": {
+         "format": "{}",
+     },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip": false,
+        "start-activated": false,
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{volume}% {icon}",
+        "format-bluetooth": " {volume}% {icon}",
+        "format-bluetooth-muted": " {volume}% ",
+        "format-muted": "{volume}% ",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "network": {
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠",
+        "tooltip": false
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% ",
+        "tooltip": false
+    },
+    "disk#root": {
+        "format": "/: {percentage_used}% ",
+        "path": "/",
+        "tooltip": false
+    },
+    "disk#home": {
+        "format": "/home: {percentage_used}% ",
+        "path": "/home",
+        "tooltip": false
+    },
+    "disk#boot": {
+        "format": "/boot: {percentage_used}% ",
+        "path": "/boot",
+        "tooltip": false
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""],
+        "tooltip": false
+    },
+    "clock": {
+        "timezone": "America/Los_Angeles",
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip": false
+    },
+    "tray": {
+        "icon-size": 24,
+        "spacing": 6,
+        "tooltip": false
+    }
+}]

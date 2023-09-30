@@ -1,0 +1,13 @@
+#csx wofi config
+
+show=drun
+width=400
+height=800
+allow_images=true
+allow_markup=true
+term=alacritty
+insensitive=true
+prompt=
+filter_rate=10
+image_size=32
+dynamic_lines=true
