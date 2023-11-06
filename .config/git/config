@@ -1,6 +1,3 @@
-[user]
-	email = cspreen@calpoly.edu
-	name = csa-slo
 [core]
 	editor = nvim
 [credential]
